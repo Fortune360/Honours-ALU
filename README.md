@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Creation and simulation of a 8/16/32/64-bit Arithmetic Logic Units using the Xilinx ISE Suite. VHDL was the language of choice, and iSim was used to benchmark the different ALUs through set stimulus cases. 
+Creation and simulation of four (8/16/32/64-bit) different Arithmetic Logic Units using the Xilinx ISE Suite. VHDL was the language of choice, and iSim was used to benchmark the different ALUs through set stimulus cases. 
 
 ## Design
 
