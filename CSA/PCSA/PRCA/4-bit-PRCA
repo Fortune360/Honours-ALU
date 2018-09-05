@@ -1,0 +1,45 @@
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.all;
+
+entity PARTIAL_RIPPLE_CARRY is
+	Generic (
+					N	: integer := 4 					-- 4-bit block size.
+		);
+	Port ( 	INP_A : in signed(N-1 downto 0);		-- Operand A
+				INP_B	: in signed(N-1 downto 0);		--	Operand B
+				C_IN 	: in std_logic;					-- Carry in
+				SUM 	: out signed(N-1 downto 0);	-- Sum
+				PRO	: out signed(N-1 downto 0);	--	Propogated values
+				C_OUT : out std_logic					-- Carry out
+		);
+end PARTIAL_RIPPLE_CARRY;
+
+architecture Behavioral of PARTIAL_RIPPLE_CARRY is
+
+	component PARTIAL_FULL_ADDER
+		Port (	INP_A : in  std_logic;
+					INP_B : in  std_logic;
+					C_IN 	: in  std_logic;
+					SUM 	: out std_logic;
+					PRO 	: out std_logic;
+					C_OUT	: out std_logic
+		);
+	end component;
+	
+	-- The carry out values for first three FAs
+	signal C1_OUT	: std_logic;
+	signal C2_OUT	: std_logic;
+	signal C3_OUT	: std_logic; 
+
+begin
+
+	PFA1: PARTIAL_FULL_ADDER PORT MAP(INP_A(0), INP_B(0), C_IN, SUM(0), PRO(0), C1_OUT);
+	PFA2: PARTIAL_FULL_ADDER PORT MAP(INP_A(1), INP_B(1), C1_OUT, SUM(1), PRO(1), C2_OUT);
+	PFA3: PARTIAL_FULL_ADDER PORT MAP(INP_A(2), INP_B(2), C2_OUT, SUM(2), PRO(2), C3_OUT);
+	PFA4: PARTIAL_FULL_ADDER PORT MAP(INP_A(3), INP_B(3), C3_OUT, SUM(3), PRO(3), C_OUT);
+
+end Behavioral;
+
