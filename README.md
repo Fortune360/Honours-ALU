@@ -41,6 +41,17 @@ Basic ALU using VHDL and tested through iSim benchmarks. N-bit refers to either 
 
 ## Testing
 
+### ALU Reports
+
+| Size   | Power Consumption | Slices | LUTS | IOBs | Delay (ns) |
+| ------ | ----------------- | ------ | ---- | ---- | ---------- |
+| 8 bit  |                   |        |      |      |            |
+| 16 bit |                   |        |      |      |            |
+| 32 bit |                   |        |      |      |            |
+| 64 bit |                   |        |      |      |            |
+
+Note: Slices, LUTS, IOBS refer to Area.
+
 ## Results
 
 ## Conlusion
