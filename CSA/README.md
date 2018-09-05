@@ -4,4 +4,4 @@
 
 ![Alt text](../images/CSA.png?raw=true "Title")
 
-Note: Image is showing the 8-bit design.
+Note: Images show all blocks for the the 8-bit design.
