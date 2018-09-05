@@ -10,23 +10,25 @@ Basic ALU using VHDL and tested through iSim benchmarks. N-bit refers to either 
 
 ### Operations (Arithmetic, Bitwise Logical & Relational)
 
-| Opcode        | Function      | Example                               |
-| ------------- | ------------- | ------------------------------------- |
-| 000           | Addition      | `OUT_RES <= INP_A + INP_B`            |
-| 001           | Subtraction   | `OUT_RES <= INP_A - INP_B`            |
-| 010           | Increment     | `OUT_RES <= INP_A + 1`                |
-| 011           | Decrement     | `OUT_RES <= INP_A - 1`                |
-| 100           | Equality      | `if (INP_A == INP_B) OUT_RES <= x'1'` |
-| 101           | AND           | `OUT_RES <= A AND B`                  |
-| 110           | OR            | `OUT_RES <= A OR B`                   |
-| 111           | XOR           | `OUT_RES <= A XOR B`                  |
+| Opcode        | Function      | Example                               | Notes                             |
+| ------------- | ------------- | ------------------------------------- | --------------------------------- |
+| 000           | Addition      | `OUT_RES <= INP_A + INP_B`            | Overflow not being caught         |
+| 001           | Subtraction   | `OUT_RES <= INP_A - INP_B`            | Overflow not being caught         |
+| 010           | Increment     | `OUT_RES <= INP_A + 1`                | Overflow issue 127 -> -128        |
+| 011           | Decrement     | `OUT_RES <= INP_A - 1`                | Overflow issue -128 -> 127        |
+| 100           | Equality      | `if (INP_A == INP_B) OUT_RES <= x'1'` | No known issues.                  |
+| 101           | AND           | `OUT_RES <= A AND B`                  | No known issues.                  |
+| 110           | OR            | `OUT_RES <= A OR B`                   | No known issues.                  |
+| 111           | XOR           | `OUT_RES <= A XOR B`                  | No known issues.                  |
 
 ### Inputs
 
-| Name          | Purpose           | Size           |
-| ------------- | ----------------- | -------------- |
-| INP_A, INP_B  | Operands          | N-bit signed   |
-| INP_SEL       | Function Selector | 3-bit unsigned |
+| Name          | Purpose            | Size           | Note                                                         |
+| ------------- | ------------------ | -------------- | ------------------------------------------------------------ |
+| INP_A, INP_B  | Operands           | N-bit signed   |                                                              |
+| INP_SEL       | Function Selector  | 3-bit unsigned |                                                              |
+| C_IN          | Carry in           | 1 bit          |                                                              |
+| CLK, ACT      | Used for testbench | 1 bit, 1 bit   | CLK to simulate CPU Control Unit, ACT to simulate ALU Active |
 
 ### Outputs
 
