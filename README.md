@@ -39,7 +39,7 @@ Basic ALU using VHDL and tested through iSim benchmarks. N-bit refers to either 
 | OUT_ZE  | Zero flag     | 1 bit         |
 | OUT_SI  | Sign flag     | 1 bit         |
 
-## Testing
+## Results
 
 ### ALU Reports
 
@@ -51,8 +51,6 @@ Basic ALU using VHDL and tested through iSim benchmarks. N-bit refers to either 
 | 64 bit |                   |        |      |      |            |
 
 Note: Slices, LUTS, IOBS refer to Area.
-
-## Results
 
 ## Conlusion
 
