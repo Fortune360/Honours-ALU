@@ -43,19 +43,21 @@ Basic Arithmetic Logic Unit using VHDL. N-bit refers to either the 8, 16, 32, or
 
 ### ALU Reports
 
-| Size   | Power Consumption | Slices | LUTS | IOBs | Delay (ns) |
-| ------ | ----------------- | ------ | ---- | ---- | ---------- |
-| 8 bit  |                   |        |      |      |            |
-| 16 bit |                   |        |      |      |            |
-| 32 bit |                   |        |      |      |            |
-| 64 bit |                   |        |      |      |            |
+| Size    | Delay (ns) | Slices | LUTS | IOBs | Power Consumption |
+| ------- | ---------- | ------ | ---- | ---- | ----------------- |
+| 8 bit   | 8.243      |        |      |      |                   |
+| 16 bit  | 7.949      |        |      |      |                   |
+| 32 bit  | 8.893      |        |      |      |                   |
+| 64 bit  | 10.781     |        |      |      |                   |
+| 128 bit | 14.557     |        |      |      |                   |
 
 Note: Slices, LUTS, IOBS refer to Area.
 
 ### Synthesis Report
 
 `ALU with CSA`: 14.68ns propagation delay. </br>
-`ALU with Lib`: 8.243ns propagation delay.
+`ALU with Lib`: 8.243ns propagation delay. </br>
+Note: These are 8-bit ALU results.
 
 ## Conlusion
 
