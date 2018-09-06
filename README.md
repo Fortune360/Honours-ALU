@@ -1,4 +1,4 @@
-# Honours-ALU
+# Honours-ALU and CSA design
 
 ## Introduction
 
