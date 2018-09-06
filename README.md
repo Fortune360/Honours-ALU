@@ -54,8 +54,8 @@ Note: Slices, LUTS, IOBS refer to Area.
 
 ### Synthesis Report
 
-ALU + CSA: 14.68ns propagation delay.
-ALU + Lib: 8.243ns propagation delay.
+`ALU with CSA`: 14.68ns propagation delay. </br>
+`ALU with Lib`: 8.243ns propagation delay.
 
 ## Conlusion
 
