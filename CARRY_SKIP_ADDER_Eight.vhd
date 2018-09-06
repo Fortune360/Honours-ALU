@@ -7,17 +7,17 @@ use IEEE.NUMERIC_STD.all;
 
 entity CARRY_SKIP_ADDER is
 	Generic (
-						N	: integer := 8									-- 8-bit Carry skip adder
+						N : integer := 8							-- 8-bit Carry skip adder
 		);
 	Port (
 				-- Inputs
-					INP_A : in std_logic_vector(N-1 downto 0);	-- Operand A
+					INP_A 	: in std_logic_vector(N-1 downto 0);	-- Operand A
 					INP_B	: in std_logic_vector(N-1 downto 0);	-- Operand B
 					C_IN 	: in std_logic;								-- Carry in to set Adder to 'subtraction mode'.
 					
 				-- Outputs
 					SUM 	: out std_logic_vector(N-1 downto 0);	-- Result.
-					C_OUT : out std_logic								--	Carry out.
+					C_OUT 	: out std_logic								-- Carry out.
 		);
 end CARRY_SKIP_ADDER;
 
@@ -25,14 +25,14 @@ architecture Behavioral of CARRY_SKIP_ADDER is
 
 	component PARTIAL_CARRY_SKIP_ADDER
 		Generic (
-						N	: integer := 4									-- 4-bit block size.
+					N	: integer := 4									-- 4-bit block size.
 			);
 		Port ( 	INP_A : in std_logic_vector(N-1 downto 0);
 					INP_B	: in std_logic_vector(N-1 downto 0);
 					C_IN 	: in std_logic;
 					
 					SUM 	: out std_logic_vector(N-1 downto 0);
-					C_OUT : out std_logic
+					C_OUT 	: out std_logic
 			);
 	end component;
 
