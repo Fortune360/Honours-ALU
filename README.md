@@ -16,7 +16,7 @@ Basic Arithmetic Logic Unit using VHDL. N-bit refers to either the 8, 16, 32, or
 | 001           | Subtraction   | `OUT_RES <= INP_A - INP_B`            | Overflow not being caught         |
 | 010           | Increment     | `OUT_RES <= INP_A + 1`                | Overflow issue 127 -> -128        |
 | 011           | Decrement     | `OUT_RES <= INP_A - 1`                | Overflow issue -128 -> 127        |
-| 100           | Equality      | `if (INP_A == INP_B) OUT_RES <= x'1'` | No known issues.                  |
+| 100           | Equality      | `if (INP_A == INP_B) OUT_RES <= x'1'` | Re-testing required with int := 0 |
 | 101           | AND           | `OUT_RES <= A AND B`                  | No known issues.                  |
 | 110           | OR            | `OUT_RES <= A OR B`                   | No known issues.                  |
 | 111           | XOR           | `OUT_RES <= A XOR B`                  | No known issues.                  |
