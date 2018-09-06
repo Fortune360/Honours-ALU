@@ -52,5 +52,10 @@ Basic Arithmetic Logic Unit using VHDL. N-bit refers to either the 8, 16, 32, or
 
 Note: Slices, LUTS, IOBS refer to Area.
 
+### Synthesis Report
+
+ALU + CSA: 14.68ns propagation delay.
+ALU + Lib: 8.243ns propagation delay.
+
 ## Conlusion
 
