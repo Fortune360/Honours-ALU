@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Creation and simulation of four (8/16/32/64-bit) different Arithmetic Logic Units using the Xilinx ISE Suite. VHDL was the language of choice, and iSim was used to benchmark the different ALUs through set stimulus cases. 
+Creation and simulation of four (8/16/32/64-bit) different Arithmetic Logic Units using the Xilinx ISE Suite. 
 
 ## Design
 
-Basic ALU using VHDL and tested through iSim benchmarks. N-bit refers to either the 8, 16, 32, or 64-bit ALU.
+Basic Arithmetic Logic Unit using VHDL. N-bit refers to either the 8, 16, 32, or 64-bit ALU.
 
 ### Operations (Arithmetic, Bitwise Logical & Relational)
 
