@@ -93,7 +93,9 @@ Note:
 | 16         | 12.223    | 39     | 104    | 17        | 203  | 56   | 56          | 17      | 1     |
 | 32         | 14.121    | 71     | 206    | 33        | 402  | 104  | 104         | 33      | 1     |
 | 64         | 17.917    | 135    | 399    | 65        | 789  | 200  | 200         | 65      | 1     |
-| 128        | Error (\*) More than 100% of Device resources are used.
+| 128        |                                                                                       |
+
+128-bit ALU: **Error (\*) More than 100% of Device resources are used.**
 
 Note: 
 * Data Path: INP_A -> Result_N. N being the bit size of the ALU minus one (count from 0).
