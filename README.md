@@ -87,17 +87,23 @@ Note:
 
 **ALUs using default library:**
 
-| Size    | Delay (ns) | Slices | LUTS | IOBs | Power Consumption |
-| ------- | ---------- | ------ | ---- | ---- | ----------------- |
-| 8 bit   |            |        |      |      |                   |
-| 16 bit  |            |        |      |      |                   |
-| 32 bit  |            |        |      |      |                   |
-| 64 bit  |            |        |      |      |                   |
-| 128 bit |            |        |      |      |                   |
+| Size (bit) | Prop (ns) | LL     | Slices | Slice FFs | LUTs | IOs  | Bonded IOBs | IOB FFs | GCLKs |
+| ---------- | --------- | ------ | ------ | --------- | ---- | ---- | ----------- | ------- | ----- |
+| 8          | 11.134    | 23     | 53     | 9         | 101  | 32   | 32          | 9       | 1     |
+| 16         | 12.223    | 39     | 104    | 17        | 203  | 56   | 56          | 17      | 1     |
+| 32         | 14.121    | 71     | 206    | 33        | 402  | 104  | 104         | 33      | 1     |
+| 64         | 17.917    | 135    | 399    | 65        | 789  | 200  | 200         | 65      | 1     |
+| 128        | Error (\*) More than 100% of Device resources are used.
 
 Note: 
-* Slices, LUTS, IOBS refer to Area.
-* Propagation delays taken from Synthesis report.
+* Data Path: INP_A -> Result_N. N being the bit size of the ALU minus one (count from 0).
+* Propagation delays taken from Synthesis report, rest from utilization summary.
+* Prop; Propgation Delay.
+* LL; Levels of Logic.
+* FF; Flip Flop.
+* LUT; LookUp Table.
+* IO; Input/Output.
+* IOB; Input/Output Block.
 
 ## Conlusion
 
