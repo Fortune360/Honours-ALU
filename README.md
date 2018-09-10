@@ -51,14 +51,14 @@ Testbenches are given (appended _TB). Below are the [13] purposeful tests run on
 | Switches | INP_A    | INP_B    | Shows                             | Integer equation  |
 | -------- | -------- | -------- | --------------------------------- | ----------------- |
 | 0000     | 00011100 | 00100001 | Addition with carry in.           | `28 + 33 = 61`    |
-| 0001     | 11111111 | 00000001 | Addition with overflow.           | `256 + 1 = (1)|x` |
+| 0001     | 11111111 | 00000001 | Addition with overflow.           | `256 + 1 = (1)x`  |
 | 0010     | 00001100 | 00000100 | Subtraction with even result.     | `12 - 8 = 4`      |
 | 0011     | 00000110 | 10100000 | Subtraction with sign change.     | `6 - 160 = -154`  |
 | 0100     | 00100111 | 00100111 | Subtraction with cleared result.  | `39 - 39 = 0`     |
 | 0101     | 01001101 | N/A      | INP_A increment.                  | `77 => 78`        |
-| 0110     | 11111111 | N/A      | INP_A increment with overflow.    | `256 => (1)|x`    |
+| 0110     | 11111111 | N/A      | INP_A increment with overflow.    | `256 => (1)x`     |
 | 0111     | 00110110 | N/A      | INP_A decrement.                  | `54 => 53`        |
-| 1000     | 00000000 | N/A      | INP_A decrement with 'underflow'. | `0 => (1)|x`      |
+| 1000     | 00000000 | N/A      | INP_A decrement with 'underflow'. | `0 => (1)x`       |
 | 1001     | 00111001 | 00111001 | Equality (true)                   | ` => 11111111`    |
 | 1010     | 10100111 | 00101101 | Equality (false)                  | ` => 00000000`    |
 | 1011     | 10101011 | 00011011 | AND                               | `00001011`        |
