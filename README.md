@@ -83,7 +83,6 @@ Note:
 | 16         | 12.223    | 39     | 104    | 17        | 203  | 56   | 56          | 17      | 1     |
 | 32         | 14.121    | 71     | 206    | 33        | 402  | 104  | 104         | 33      | 1     |
 | 64         | 17.917    | 135    | 399    | 65        | 789  | 200  | 200         | 65      | 1     |
-| 128        |                                                                                       |
 
 128-bit ALU: **Error (\*) More than 100% of Device resources are used.**
 
@@ -111,7 +110,6 @@ Note:
 * (16 bit) Data Path: INP_A -> TEMP_OC.
 * (32 bit) Data Path: INP_A -> TEMP_OC.
 * (64 bit) Data Path: INP_A -> TEMP_OC.
-* 128-bit ALU with CSA was not looked into due to no normal ALU to compare against.
 
 **ALUs using standard Ripple Carry**
 | Size (bit) | Prop (ns) | LL     | Slices | Slice FFs | LUTs | IOs  | Bonded IOBs | IOB FFs | GCLKs |
@@ -124,4 +122,5 @@ Note:
 
 ## Conlusion
 
-Not scaling the Partial Carry Skip Adder with the ALU bit size, resulted in some heavy delays 
+Not scaling the Partial Carry Skip Adder with the ALU bit size, resulted in some heavy delays.
+
