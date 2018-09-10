@@ -46,7 +46,7 @@ Note:
 
 ## Testing
 
-Testbenches are given (appended _TB). Below are the [13] tests run on the Spartan-3E FPGA Board.
+Testbenches are given (appended _TB). Below are the [13] purposeful tests run on the Spartan-3E FPGA Board.
 
 | Switches | INP_A    | INP_B    | Shows                             | Integer equation  |
 | -------- | -------- | -------- | --------------------------------- | ----------------- |
