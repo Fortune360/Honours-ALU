@@ -49,6 +49,7 @@ Note:
 ### ALU Reports
 
 **ALUs using custom CSA:**
+
 | Size    | Delay (ns) | Slices | LUTS | IOBs | Power Consumption |
 | ------- | ---------- | ------ | ---- | ---- | ----------------- |
 | 8 bit   |            |        |      |      |                   |
@@ -58,6 +59,7 @@ Note:
 | 128 bit |            |        |      |      |                   |
 
 **ALUs using default library:**
+
 | Size    | Delay (ns) | Slices | LUTS | IOBs | Power Consumption |
 | ------- | ---------- | ------ | ---- | ---- | ----------------- |
 | 8 bit   |            |        |      |      |                   |
