@@ -44,6 +44,33 @@ Note:
 * Zero flag is set if OUT_RES is cleared.
 * Sign flag is set if OUT_RES is a negative value.
 
+## Testing
+
+Testbenches are given (appended _TB). Below are the [13] tests run on the Spartan-3E FPGA Board.
+
+| Switches | INP_A    | INP_B    | Shows                             | Integer equation  |
+| -------- | -------- | -------- | --------------------------------- | ----------------- |
+| 0000     | 00011100 | 00100001 | Addition with carry in.           | `28 + 33 = 61`    |
+| 0001     | 11111111 | 00000001 | Addition with overflow.           | `256 + 1 = (1)|x` |
+| 0010     | 00001100 | 00000100 | Subtraction with even result.     | `12 - 8 = 4`      |
+| 0011     | 00000110 | 10100000 | Subtraction with sign change.     | `6 - 160 = -154`  |
+| 0100     | 00100111 | 00100111 | Subtraction with cleared result.  | `39 - 39 = 0`     |
+| 0101     | 01001101 | N/A      | INP_A increment.                  | `77 => 78`        |
+| 0110     | 11111111 | N/A      | INP_A increment with overflow.    | `256 => (1)|x`    |
+| 0111     | 00110110 | N/A      | INP_A decrement.                  | `54 => 53`        |
+| 1000     | 00000000 | N/A      | INP_A decrement with 'underflow'. | `0 => (1)|x`      |
+| 1001     | 00111001 | 00111001 | Equality (true)                   | ` => 11111111`    |
+| 1010     | 10100111 | 00101101 | Equality (false)                  | ` => 00000000`    |
+| 1011     | 10101011 | 00011011 | AND                               | `00001011`        |
+| 1100     | 10101000 | 11100001 | OR                                | `11101001`        |
+| 1101     | 11000110 | 10010011 | XOR                               | `01010101`        |
+
+Note: 
+* This was only done using the 8-bit ALU with CSA, as each bit of the 8-bit result could be shown on an individual LED.
+* Pin allocations can be found in the constraints.ucf file.
+* Four switchs used in following order; `SW0`, `SW1`, `SW2`, `SW3`.
+* `x` implies the result does not matter, as the overflow flag is set `(1)`.
+
 ## Results
 
 ### ALU Reports
