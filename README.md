@@ -75,16 +75,6 @@ Note:
 
 ### ALU Reports
 
-**ALUs using custom CSA:**
-
-| Size    | Delay (ns) | Slices | LUTS | IOBs | Power Consumption |
-| ------- | ---------- | ------ | ---- | ---- | ----------------- |
-| 8 bit   |            |        |      |      |                   |
-| 16 bit  |            |        |      |      |                   |
-| 32 bit  |            |        |      |      |                   |
-| 64 bit  |            |        |      |      |                   |
-| 128 bit |            |        |      |      |                   |
-
 **ALUs using default library:**
 
 | Size (bit) | Prop (ns) | LL     | Slices | Slice FFs | LUTs | IOs  | Bonded IOBs | IOB FFs | GCLKs |
@@ -107,6 +97,31 @@ Note:
 * IO; Input/Output.
 * IOB; Input/Output Block.
 
+**ALUs using custom CSA:**
+
+| Size (bit) | Prop (ns) | LL     | Slices | Slice FFs | LUTs | IOs  | Bonded IOBs | IOB FFs | GCLKs |
+| ---------- | --------- | ------ | ------ | --------- | ---- | ---- | ----------- | ------- | ----- |
+| 8          |  14.996   | 10     | 12     | N/A       | 22   | 26   | 26          | N/A     | N/A   |
+| 16         |  24.941   | 20     | 108    | 17        | 205  | 56   | 56          | 17      | 1     |
+| 32         |  43.938   | 36     | 207    | 33        | 295  | 104  | 104         | 33      | 1     |
+| 64         |  80.804   | 66     | 409    | 65        | 778  | 200  | 200         | 65      | 1     |
+
+Note: 
+* (8 bit) Data Path: INP_A -> C_OUT.
+* (16 bit) Data Path: INP_A -> TEMP_OC.
+* (32 bit) Data Path: INP_A -> TEMP_OC.
+* (64 bit) Data Path: INP_A -> TEMP_OC.
+* 128-bit ALU with CSA was not looked into due to no normal ALU to compare against.
+
+**ALUs using standard Ripple Carry**
+| Size (bit) | Prop (ns) | LL     | Slices | Slice FFs | LUTs | IOs  | Bonded IOBs | IOB FFs | GCLKs |
+| ---------- | --------- | ------ | ------ | --------- | ---- | ---- | ----------- | ------- | ----- |
+| 8          |     | 10     | 12     | N/A       | 22   | 26   | 26          | N/A     | N/A   |
+| 16         |     | 20     | 108    | 17        | 205  | 56   | 56          | 17      | 1     |
+| 32         |     | 36     | 207    | 33        | 295  | 104  | 104         | 33      | 1     |
+| 64         |     | 66     | 409    | 65        | 778  | 200  | 200         | 65      | 1     |
+
+
 ## Conlusion
 
-
+Not scaling the Partial Carry Skip Adder with the ALU bit size, resulted in some heavy delays 
