@@ -51,7 +51,7 @@ Testbenches are given (appended _TB). Below are the [13] purposeful tests run on
 | Switches | INP_A    | INP_B    | Shows                             | Integer equation     |
 | -------- | -------- | -------- | --------------------------------- | -------------------- |
 | 0000     | 00011100 | 00100001 | Addition with carry in.           | `28 + 33 + (1) = 61` |
-| 0001     | 11111111 | 00000001 | Addition with overflow.           | `256 + 1 = (1)x`     |
+| 0001     | 11111111 | 00000001 | Addition with overflow.           | `255 + 1 = (1)x`     |
 | 0010     | 00001100 | 00000100 | Subtraction with even result.     | `16 - 8 = 8`         |
 | 0011     | 00000110 | 10100000 | Subtraction with sign change.     | `6 - 160 = -154`     |
 | 0100     | 00100111 | 00100111 | Subtraction with cleared result.  | `39 - 39 = 0`        |
@@ -110,17 +110,3 @@ Note:
 * (16 bit) Data Path: INP_A -> TEMP_OC.
 * (32 bit) Data Path: INP_A -> TEMP_OC.
 * (64 bit) Data Path: INP_A -> TEMP_OC.
-
-**ALUs using standard Ripple Carry**
-| Size (bit) | Prop (ns) | LL     | Slices | Slice FFs | LUTs | IOs  | Bonded IOBs | IOB FFs | GCLKs |
-| ---------- | --------- | ------ | ------ | --------- | ---- | ---- | ----------- | ------- | ----- |
-| 8          |  x        | 10     | 12     | N/A       | 22   | 26   | 26          | N/A     | N/A   |
-| 16         |  x        | 20     | 108    | 17        | 205  | 56   | 56          | 17      | 1     |
-| 32         |  x        | 36     | 207    | 33        | 295  | 104  | 104         | 33      | 1     |
-| 64         |  x        | 66     | 409    | 65        | 778  | 200  | 200         | 65      | 1     |
-
-
-## Conlusion
-
-...
-
