@@ -122,5 +122,5 @@ Note:
 
 ## Conlusion
 
-Not scaling the Partial Carry Skip Adder with the ALU bit size, resulted in some heavy delays.
+...
 
