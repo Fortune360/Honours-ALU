@@ -124,9 +124,14 @@ Note:
 ## Future Work
 
 Re-implemented Carry Skip Adder.
-* Varying block size, componentizing skip logic.
+* Varying block size.
+* Componentizing skip logic.
+</br>
+
 Varying supported Opcodes.
-* Either size (number of operations), or complexity.
+* Either size (number of operations),
+* Or complexity.
+</br>
 Focus on externals which house a standard ALU design.
 * Comparison of CPU versus GPU designs on an FPGA.
-
+</br>
