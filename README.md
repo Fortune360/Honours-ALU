@@ -115,11 +115,11 @@ Note:
 
 **LookUp Tables**
 
-![Alt text](../images/LUTs.png?raw=true "Title")
+![Alt text](/images/LUTs.png?raw=true "Title")
 
 **Propagation Delays (ns)**
 
-![Alt text](../images/Prop.png?raw=true "Title")
+![Alt text](/images/Prop.png?raw=true "Title")
 
 ## Future Work
 
