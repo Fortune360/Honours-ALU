@@ -1,4 +1,4 @@
-# Honours-ALU and CSA design
+# Honours-ALU and CSA design [Code out-dated]
 
 ## Introduction
 
