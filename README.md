@@ -134,4 +134,5 @@ Varying supported Opcodes.
 </br>
 Focus on externals which house a standard ALU design.
 * Comparison of CPU versus GPU designs on an FPGA.
+* Potential tweaks to ALU to target special cases.
 </br>
