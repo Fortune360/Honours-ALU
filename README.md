@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Creation and simulation of two sets of four (8/16/32/64-bit) different Arithmetic Logic Units using the Xilinx ISE Suite. One set using a custom 4-bit block-carry-skip-adder design for it's adder, and the other using the xilinx library adder. The rest of the functions are identical to act as fixed variables when comparing propagation delays. 
+Creation and simulation of two sets of four (8/16/32/64-bit) different Arithmetic Logic Units using the Xilinx ISE Suite. One set using a custom 4-bit block-carry-skip-adder design for it's adder, and the other using the xilinx library adder. The rest of the functions are identical to act as fixed variables when comparing propagation delays and area (LUTs). 
 
 ## Design
 
@@ -28,7 +28,7 @@ Basic Arithmetic Logic Unit using VHDL. N-bit refers to either the 8, 16, 32, or
 | INP_A, INP_B  | Operands           | N-bit logic_vector |                                  |
 | INP_SEL       | Function Selector  | 3-bit unsigned     |                                  |
 | C_IN          | Carry in           | 1 bit              |                                  |
-| CLK, ACT      | Used for testbench | 1 bit, 1 bit       | ACT to simulate ALU Active (TB). | 
+| CLK, (ACT)    | Used for testbench | 1 bit, 1 bit       | ACT to simulate ALU Active (TB). | 
 
 ### Outputs
 
@@ -110,3 +110,23 @@ Note:
 * (16 bit) Data Path: INP_A -> TEMP_OC.
 * (32 bit) Data Path: INP_A -> TEMP_OC.
 * (64 bit) Data Path: INP_A -> TEMP_OC.
+
+### Graphed Results
+
+**LookUp Tables**
+
+![Alt text](../images/LUTs.png?raw=true "Title")
+
+**Propagation Delays (ns)**
+
+![Alt text](../images/Prop.png?raw=true "Title")
+
+## Future Work
+
+Re-implemented Carry Skip Adder.
+* Varying block size, componentizing skip logic.
+Varying supported Opcodes.
+* Either size (number of operations), or complexity.
+Focus on externals which house a standard ALU design.
+* Comparison of CPU versus GPU designs on an FPGA.
+
